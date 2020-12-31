@@ -1,0 +1,47 @@
+<?xml version="1.0" ?>
+<CameraSettings>
+    <Grabbers type="MVSGrabber">
+	<BaseCamera type="HKVisionCamera">
+	    <ConfigurationID>812117</ConfigurationID>
+	    <GrabberName>Pylon Grabber</GrabberName>
+	    <CameraID>267</CameraID>
+	    <CameraName>Cam1</CameraName>
+	    <CameraSerial>21958411</CameraSerial>
+	    <CameraModelName>acA640-300gm</CameraModelName>
+	    <CameraDeviceID>21958411</CameraDeviceID>
+	    <CameraIndex>0</CameraIndex>
+	    <ConfigFile>0</ConfigFile>
+	    <CameraIP>169.254.1.11</CameraIP>
+	    <NumBuffers>60</NumBuffers>
+	    <TransferTime>30</TransferTime>
+	    <Configuration>
+		<ExposureTime>125</ExposureTime>
+		<Gain>136</Gain>
+		<TriggerSource>Software</TriggerSource>
+		<TriggerEdge>RisingEdge</TriggerEdge>
+		<Strobe1Invert>false</Strobe1Invert>
+		<Strobe1Delay>0</Strobe1Delay>
+		<Strobe1Length>100</Strobe1Length>
+		<ScanMode>Areascan</ScanMode>
+		<WhiteBalanceR>1</WhiteBalanceR>
+		<WhiteBalanceG>1</WhiteBalanceG>
+		<WhiteBalanceB>1</WhiteBalanceB>
+		<BlackLevel>0</BlackLevel>
+		<Gamma>1</Gamma>
+		<OffsetX>16</OffsetX>
+		<OffsetY>16</OffsetY>
+		<Width>640</Width>
+		<Height>480</Height>
+		<ReverseX>false</ReverseX>
+		<ReverseY>false</ReverseY>
+		<TriggerSourceLine>Software</TriggerSourceLine>
+		<TriggerEdgeLine>RisingEdge</TriggerEdgeLine>
+		<TriggerDelayLine>0</TriggerDelayLine>
+		<ShaftEncoderLineSourcePhaseA>Line1</ShaftEncoderLineSourcePhaseA>
+		<ShaftEncoderLineSourcePhaseB>Line2</ShaftEncoderLineSourcePhaseB>
+		<ShaftEncoderMultiplier>1</ShaftEncoderMultiplier>
+		<ShaftEncoderDivider>1</ShaftEncoderDivider>
+	    </Configuration>
+	</BaseCamera>
+    </Grabbers>
+</CameraSettings>
