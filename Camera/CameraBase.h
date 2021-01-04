@@ -1,17 +1,4 @@
 /*
- * Copyright 2019 <copyright holder> <email>
- * 
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- * 
- *     http://www.apache.org/licenses/LICENSE-2.0
- * 
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
  * 
  */
 
@@ -21,7 +8,7 @@
 #include <string.h>
 #include <math.h>
 #include <iostream>
-
+#include <list>
 using namespace std;
 
 namespace DPCGrabbers
@@ -39,7 +26,7 @@ namespace DPCGrabbers
 		 uint64_t Width;
 		 uint64_t Height;
 		 uint8_t  channels;
-		 uint8_t* ImageBuffer;
+		 uint8_t* pData;
 	 };
 
 	 struct CameraParameters {
@@ -72,6 +59,8 @@ namespace DPCGrabbers
 	    virtual int Initial() = 0;
 	    virtual int Open() = 0;
 	    virtual int Close() = 0;
+		virtual int StartGrabbing() = 0;
+		virtual int StopGrabbing() = 0;
 	    virtual int LoadParametersFromFile(const char* pFileName) = 0;
 		virtual int SetParameters(void* parameters) = 0;
 	    virtual int SaveParametersToFile(const char* pFileName)   = 0;
@@ -89,6 +78,8 @@ namespace DPCGrabbers
 	    virtual int SaveGrabbedImage() = 0;
 	    
 	    void ThreadGrabInitial();
+		std::list<GrabbedImage>* GrabbedImageBuffer = NULL;
+
 	    static int  StringToInt(char* pValue)
 	    {
 		int value = 0;

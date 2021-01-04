@@ -45,12 +45,13 @@ namespace DPCDataManage{
     
     //!******************内部使用的函数***********************
     void CamerasInitial();						    //相机初始化
-    bool LoadCamerasSerialFromXML();					//从xml读取所有相机驱动接口和序列号serials	
+    bool LoadCamerasSerialFromFile();					//从xml读取所有相机驱动接口和序列号serials	
     std::string GetProjectPath();					//获取当前工程的目录用以查找下级配置文件,CameraSetting.xml等
     
 }
 
 extern std::list<DPCGrabbers::CameraBase*>* G_listCameras;			            //全局变量:相机对象list
 extern std::list<DPCDataManage::GrabberCameraInfo>* G_listGrabberCameraInfo;	//从xml文件读取的相机信息
+
 
 #endif

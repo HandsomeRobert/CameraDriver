@@ -53,8 +53,8 @@ void DPCGrabbers::CameraBase::ThreadImageGrab( void* pObject )
 		//cam_object->image_save(image_count, ptrGrabResult);
 		// CImagePersistence::Save( ImageFileFormat_Png, "The_Grabbed_image.png", ptrGrabResult);
 		
-		const uint8_t *pImageBuffer = pTempImageInfo->ImageBuffer;//pImageBuffer saves a only one dimension gray images
-		cv::Mat opencvImage = cv::Mat(pTempImageInfo->Height, pTempImageInfo->Width, CV_8UC3, (uint8_t *)pTempImageInfo->ImageBuffer);//convert pylon image to OpenCV Image
+		const uint8_t *pImageBuffer = pTempImageInfo->pData;//pImageBuffer saves a only one dimension gray images
+		cv::Mat opencvImage = cv::Mat(pTempImageInfo->Height, pTempImageInfo->Width, CV_8UC3, (uint8_t *)pTempImageInfo->pData);//convert pylon image to OpenCV Image
 		//cv::imshow("GrabbedImage", opencvImage);
 		
 		

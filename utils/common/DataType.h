@@ -1,13 +1,15 @@
 #pragma once
 #include <vector>
 #include <string>
-#include "./easylogging++.h"
+#include "../easylogging++.h"
 
+//#define _HAS_STD_BYTE 0
 typedef unsigned char byte;
 
 
 namespace MCDataType {
-
+    
+    //typedef unsigned char byte;
     //全局变量的申明，不能定义！！！不然会多重包含错误
     extern const char* ImagePathModel;                         //相对&&绝对路径，仅声明，不要定义，会出现多重定义错误。 ！！！应设置为= "./images"
     extern const char* FilePathModel;                          //相对&&绝对路径, 仅声明，不要定义，会出现多重定义错误。  应设置为= "./MODEL_DATA"
@@ -95,4 +97,3 @@ namespace MCDataType {
         float confidenceValue;
     };
 }
-

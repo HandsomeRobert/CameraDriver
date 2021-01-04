@@ -5,6 +5,7 @@
 #include "opencv2/core.hpp"
 #include "../utils/DataManage.h"
 
+
 using namespace std;
 
 
@@ -39,7 +40,8 @@ void initLogSystem(void)
 int main()
 {
     initLogSystem();
-	cout << "Hello CMake." << endl;
+	cout << "Hello CameraDriver System Initialing." << endl;
+    LOG(INFO) << "CameraDriver Log System Started";
 
     DPCDataManage::GlobalDataInitial(); //初始化全局数据和相机
 

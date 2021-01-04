@@ -4,8 +4,8 @@
 cmake_minimum_required (VERSION 3.8)
 project ("CameraDriver")
 
-set(CMAKE_CXX_STANDARD 17)
-
+set(CMAKE_CXX_STANDARD 11)
+set(_HAS_STD_BYTE 0)
 option(OPENCV "Opencv Interface" ON)
 find_package(OpenCV REQUIRED)
 include_directories(${OpenCV_INCLUDE_DIRS})

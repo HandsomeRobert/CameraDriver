@@ -2,7 +2,7 @@
 <CameraSettings>
     <Grabbers type="MVSGrabber">
 	<BaseCamera type="HKVisionCamera">
-	    <ConfigurationID>812117</ConfigurationID>
+	    <ConfigurationID>00D26289851</ConfigurationID>
 	    <GrabberName>Pylon Grabber</GrabberName>
 	    <CameraID>267</CameraID>
 	    <CameraName>Cam1</CameraName>

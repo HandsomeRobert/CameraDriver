@@ -18,7 +18,7 @@ void DPCDataManage::GlobalDataInitial()
 	CamerasInitial();//初始相机，创建相机控制对象
 }
 
-bool DPCDataManage::LoadCamerasSerialFromXML()
+bool DPCDataManage::LoadCamerasSerialFromFile()
 {
     try
     {
@@ -78,7 +78,7 @@ std::string DPCDataManage::GetProjectPath()
 
 void DPCDataManage::CamerasInitial()
 {
-    LoadCamerasSerialFromXML();
+    LoadCamerasSerialFromFile();
     
     for(auto itor = G_listGrabberCameraInfo->begin(); itor != G_listGrabberCameraInfo->end(); itor++)
     {
